@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn SignUp</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <div class="form-box" id="form">
+            <form action="#" class="LoginForm">
+                <h2>Login</h2>
+                <div class="input-box">
+                    <input type="email" id="signin_email" required>
+                    <label>Email</label>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="signin_password" required>
+                    <label>Password</label>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <div class="forget-section">
+                    <p>
+                        <input type="checkbox" name="" id="">
+                        Remember me
+                    </p>
+                    <a href="#">Forget Password?</a>
+                </div>
+                <button class="btn" id="signin_btn">Sign in</button>
+                <div class="account-creation">
+                    <span>Don't have an account? <a href="#" class="RegisterLink">Register</a> </span>
+                </div>
+            </form>
+            <form action="#" class="RegisterForm">
+                <h2>Register</h2>
+                <div class="input-box">
+                    <input type="text" id="userName">
+                    <label>Username</label>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="email" id="signup_email" required>
+                    <label>Email</label>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="signup_password" required>
+                    <label>Password</label>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <button class="btn" id="signup_btn">Sign up</button>
+                <div class="account-creation">
+                    <span>Already have an account? <a href="#" class="LoginLink">Login</a> </span>
+                </div>
+            </form>
+        </div>
+    </div>   
+        <div id="main" style="display: none;">
+            <h1>Ahmed</h1>
+        </div>
+
+    <script>
+        const LoginForm = document.querySelector('.LoginForm');
+        const RegisterForm = document.querySelector('.RegisterForm');
+        const RegisterLink = document.querySelector('.RegisterLink');
+        const LoginLink = document.querySelector('.LoginLink');
+
+        RegisterLink.onclick = () => {
+            RegisterForm.classList.remove('active');
+            LoginForm.classList.remove('active');
+        }
+
+        LoginLink.onclick = () => {
+            LoginForm.classList.add('active');
+            RegisterForm.classList.add('active');
+        }
+    </script>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
